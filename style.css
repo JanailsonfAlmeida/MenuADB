@@ -95,7 +95,6 @@ li a:hover {
 li hr{
   width: 100px;
 }
-
 img {
   width: 6vh;
   height: 6vh;
@@ -149,7 +148,8 @@ background: none;
 }
 
 .submenu li{
- border-bottom: 1px solid #fff;
+ text-decoration: underline;
+ color: #fff;
   
 
 
