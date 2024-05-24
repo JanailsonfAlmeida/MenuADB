@@ -6,14 +6,9 @@ menuButton.addEventListener('click', toggleMenu);
 
 function toggleMenu() {
     menu.classList.toggle('show');
-    if (menu.classList.contains('show')) {
-        menu.style.opacity = 1;
-        icon.src = "img/close_white_36dp.svg";
-    } else {
-        menu.style.opacity = 0;
-        icon.src = "img/menu (2).png";
-    }
+    icon.src = menu.classList.contains('show') ? "img/close_white_36dp.svg" : "img/menu (2).png";
 }
+
 const menuItems = document.querySelectorAll('.menu > li');
 
 menuItems.forEach(item => {
@@ -23,7 +18,7 @@ menuItems.forEach(item => {
         clearTimeout(timeoutId);
         const submenu = item.querySelector('.submenu');
         if (submenu) {
-            submenu.classList.add('show');
+            submenu.style.display = 'block';
         }
     });
 
@@ -31,9 +26,8 @@ menuItems.forEach(item => {
         const submenu = item.querySelector('.submenu');
         if (submenu) {
             timeoutId = setTimeout(() => {
-                submenu.classList.remove('show');
-            }, 1000); 
+                submenu.style.display = 'none';
+            }, 8000); 
         }
     });
 });
-
