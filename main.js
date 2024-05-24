@@ -27,7 +27,7 @@ menuItems.forEach(item => {
         if (submenu) {
             timeoutId = setTimeout(() => {
                 submenu.style.display = 'none';
-            }, 8000); 
+            }, 2000); 
         }
     });
 });
